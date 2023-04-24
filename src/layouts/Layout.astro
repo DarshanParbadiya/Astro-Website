@@ -2,24 +2,23 @@
 // creating an interface using typescript similar to prop types
 
 export interface Props {
-    title? : String
+  title?: String;
 }
 // put ? in case of optional prop. Layout which suppose to pass this prop will show underline because of this
 
-const {title = 'Astro Default'} = Astro.props as Props
-
+const { title = "Astro Default" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- getting a page here -->
     <slot />
-</body>
+  </body>
 </html>
